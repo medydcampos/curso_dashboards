@@ -6,8 +6,17 @@ app_ui = ui.page_navbar(
         "Page 1",
         ui.layout_sidebar(
             ui.sidebar("Sidebar"),
-            "Main Page 1"
-        ),
+            "Main Page 1", 
+            ui.markdown("example *markdown*"),
+            ui.layout_columns(
+                ui.card(ui.card_header("Title"), "Graph 1"),
+                ui.card(ui.card_header("Title"), "Table 1")
+            ),
+             ui.layout_columns(
+                ui.card(ui.card_header("Title"), "Graph 2"),
+                ui.card(ui.card_header("Title"), "Table 2")
+            )
+        )
     ),
     ui.nav_panel(
         "Page 2",
